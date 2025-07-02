@@ -1,259 +1,259 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Aerobois - Aérogommage</title>
-
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Open+Sans&display=swap" rel="stylesheet">
-
-<style>
-  /* Fond avec image boisée douce */
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Open Sans', sans-serif;
-    color: #4a3c2f;
-    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
-    background-size: cover;
-    min-height: 100vh;
-  }
-
-  /* Overlay clair pour lisibilité */
-  body::before {
-    content: "";
-    position: fixed;
-    top:0; left:0; right:0; bottom:0;
-    background: rgba(245, 241, 233, 0.85);
-    z-index: -1;
-  }
-
-  header {
-    background: rgba(92, 65, 36, 0.85);
-    color: #f5f1e9;
-    padding: 25px 40px;
-    display: flex;
-    align-items: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-  }
-  .logo {
-    display: flex;
-    align-items: center;
-  }
-  .logo img {
-    width: 80px;
-    height: 80px;
-    margin-right: 15px;
-    object-fit: contain;
-    border-radius: 12px;
-    background-color: #e3d8b0;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
-    transition: transform 0.3s ease;
-  }
-  .logo img:hover {
-    transform: scale(1.1);
-  }
-  h1 {
-    margin: 0;
-    font-family: 'Merriweather', serif;
-    font-weight: 700;
-    font-size: 2.4rem;
-    letter-spacing: 1.5px;
-  }
-
-  main {
-    padding: 40px 30px;
-    max-width: 900px;
-    margin: 40px auto;
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-  }
-
-  section {
-    margin-bottom: 45px;
-  }
-  h2 {
-    font-family: 'Merriweather', serif;
-    color: #5c4124;
-    border-bottom: 3px solid #c2a476;
-    display: inline-block;
-    padding-bottom: 8px;
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-  }
-  p, ul {
-    font-size: 1.1rem;
-    line-height: 1.6;
-  }
-  ul {
-    list-style-type: disc;
-    padding-left: 25px;
-    color: #6a5440;
-  }
-
-  /* Galerie */
-  .gallery {
-    display: flex;
-    gap: 18px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .gallery img {
-    max-width: 30%;
-    border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(92,65,36,0.3);
-    object-fit: cover;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  .gallery img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 30px rgba(92,65,36,0.5);
-  }
-
-  /* Formulaire */
-  form {
-    background: #fff;
-    padding: 25px 30px;
-    border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(92,65,36,0.15);
-  }
-  form label {
-    display: block;
-    margin-top: 20px;
-    font-weight: 600;
-    color: #5c4124;
-  }
-  form input, form textarea {
-    width: 100%;
-    padding: 12px 15px;
-    margin-top: 8px;
-    border: 2px solid #c2a476;
-    border-radius: 10px;
-    font-size: 1.05rem;
-    font-family: 'Open Sans', sans-serif;
-    transition: border-color 0.3s ease;
-  }
-  form input:focus, form textarea:focus {
-    border-color: #7a5939;
-    outline: none;
-  }
-  form button {
-    margin-top: 30px;
-    background-color: #c2a476;
-    border: none;
-    color: white;
-    padding: 14px 28px;
-    font-size: 1.2rem;
-    font-weight: 700;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: background-color 0.35s ease, box-shadow 0.35s ease;
-  }
-  form button:hover {
-    background-color: #7a5939;
-    box-shadow: 0 6px 15px rgba(122,89,57,0.6);
-  }
-
-  /* Footer */
-  footer {
-    background: rgba(92, 65, 36, 0.85);
-    color: #f5f1e9;
-    text-align: center;
-    padding: 18px 12px;
-    font-size: 1rem;
-    letter-spacing: 0.04em;
-    font-family: 'Open Sans', sans-serif;
-    box-shadow: 0 -4px 10px rgba(0,0,0,0.2);
-  }
-  footer a {
-    color: #d9c8a6;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease;
-  }
-  footer a:hover {
-    color: #fff;
-  }
-
-  @media(max-width: 700px) {
-    .gallery img {
-      max-width: 80%;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aerobois - Aérogommage professionnel à Villeneuve-Lécussan, Occitanie</title>
+  <meta name="description"
+    content="Aerobois propose un service d'aérogommage à Villeneuve-Lécussan et alentours (25km). Donnez une seconde vie à vos meubles grâce à notre expertise locale." />
+  <style>
+    /* Palette bois/chaleureuse */
+    :root {
+      --brun-fonce: #5a3e1b;
+      --brun-clair: #b28742;
+      --vert-sapin: #2f4f3f;
+      --ivoire: #f9f5ef;
+      --ombre: rgba(90, 62, 27, 0.3);
     }
-    header {
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('texture-bois-clair.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: var(--brun-fonce);
+      min-height: 100vh;
+      display: flex;
       flex-direction: column;
-      align-items: flex-start;
-      padding: 20px 25px;
     }
-    h1 {
-      margin-top: 10px;
-      font-size: 2rem;
+
+    header {
+      display: flex;
+      align-items: center;
+      background-color: var(--brun-fonce);
+      padding: 15px 25px;
+      box-shadow: 0 3px 10px var(--ombre);
+      border-bottom: 4px solid var(--brun-clair);
     }
+
+    header img {
+      height: 55px;
+      margin-right: 20px;
+    }
+
+    header h1 {
+      font-size: 1.9rem;
+      margin: 0;
+      color: var(--ivoire);
+      font-weight: 700;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+    }
+
     main {
-      margin: 20px 15px;
-      padding: 25px 20px;
+      max-width: 960px;
+      margin: 40px auto;
+      padding: 30px 35px;
+      background-color: var(--ivoire);
+      border-radius: 12px;
+      box-shadow: 0 6px 18px var(--ombre);
+      flex-grow: 1;
     }
-  }
-</style>
+
+    main section.presentation h1 {
+      color: var(--vert-sapin);
+      font-weight: 700;
+      margin-bottom: 18px;
+      font-size: 1.7rem;
+      line-height: 1.3;
+    }
+
+    main section.presentation p {
+      line-height: 1.65;
+      margin-bottom: 18px;
+      font-size: 1.12rem;
+      letter-spacing: 0.02em;
+    }
+
+    main section.services {
+      margin-top: 35px;
+    }
+
+    main section.services h2 {
+      color: var(--vert-sapin);
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+      border-bottom: 2px solid var(--brun-clair);
+      padding-bottom: 6px;
+      font-weight: 600;
+    }
+
+    main section.services ul {
+      list-style: disc inside;
+      padding-left: 0;
+      font-size: 1.1rem;
+      color: var(--brun-fonce);
+    }
+
+    main section.services ul li {
+      margin-bottom: 10px;
+    }
+
+    main section.realisations {
+      margin-top: 40px;
+    }
+
+    main section.realisations h2 {
+      color: var(--vert-sapin);
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+      border-bottom: 2px solid var(--brun-clair);
+      padding-bottom: 6px;
+      font-weight: 600;
+    }
+
+    main section.realisations div {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    main section.realisations img {
+      flex: 1 1 280px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px var(--ombre);
+      object-fit: cover;
+      height: 190px;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+      background-color: #fff;
+    }
+
+    main section.realisations img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 25px rgba(90, 62, 27, 0.6);
+    }
+
+    main section.contact {
+      margin-top: 40px;
+    }
+
+    main section.contact h2 {
+      color: var(--vert-sapin);
+      margin-bottom: 12px;
+      font-size: 1.5rem;
+      border-bottom: 2px solid var(--brun-clair);
+      padding-bottom: 6px;
+      font-weight: 600;
+    }
+
+    main section.contact p,
+    main section.contact a {
+      font-size: 1.1rem;
+      color: var(--brun-fonce);
+      text-decoration: none;
+      margin-bottom: 8px;
+      display: inline-block;
+      transition: color 0.25s ease;
+    }
+
+    main section.contact a:hover {
+      color: var(--vert-sapin);
+      text-decoration: underline;
+    }
+
+    main section.contact iframe {
+      border-radius: 10px;
+      box-shadow: 0 4px 15px var(--ombre);
+      margin-top: 12px;
+      width: 100%;
+      height: 320px;
+      border: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 16px 25px;
+      background-color: var(--brun-fonce);
+      color: var(--ivoire);
+      font-size: 0.95rem;
+      font-weight: 500;
+      margin-top: 50px;
+      border-top: 4px solid var(--brun-clair);
+      border-radius: 0 0 12px 12px;
+      box-shadow: 0 -3px 12px var(--ombre);
+    }
+
+    @media (max-width: 780px) {
+      main section.realisations div {
+        flex-direction: column;
+      }
+
+      main section.realisations img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
 </head>
+
 <body>
-
-<header>
-  <div class="logo" aria-label="Logo Aerobois">
+  <header>
     <img src="logo.png" alt="Logo Aerobois" />
-    <h1>Aerobois</h1>
-  </div>
-</header>
+    <h1>Aerobois - Aérogommage & Rénovation de meubles</h1>
+  </header>
 
-<main>
-  <section>
-    <h2>Présentation</h2>
-    <p>Mon activité d'aérogommage a pour objectif de donner une seconde vie à vos meubles de famille.</p>
-  </section>
+  <main>
+    <section class="presentation">
+      <h1>Redonnez vie à vos meubles avec Aerobois, expert en aérogommage à Villeneuve-Lécussan</h1>
+      <p>
+        Située à Villeneuve-Lécussan, Aerobois est spécialisée dans l’aérogommage de meubles anciens et de famille.
+        Nous intervenons dans un rayon de 25 km autour de Villeneuve-Lécussan, en Occitanie, pour dépoussiérer, réparer
+        et sublimer vos meubles.
+        Grâce à notre technique douce et respectueuse du bois, vos meubles retrouvent leur éclat d’origine sans agressions
+        chimiques.
+      </p>
+      <p>
+        Nos services incluent la dépose, l’aérogommage, la réparation, la finition personnalisée et la livraison.
+        Contactez-nous pour un devis gratuit et redonnez une seconde jeunesse à vos trésors familiaux.
+      </p>
+    </section>
 
-  <section>
-    <h2>Services</h2>
-    <ul>
-      <li>Dépose des meubles</li>
-      <li>Aérogommage</li>
-      <li>Réparation</li>
-      <li>Finition au choix</li>
-      <li>Livraison</li>
-    </ul>
-  </section>
+    <section class="services">
+      <h2>Nos services</h2>
+      <ul>
+        <li>Dépose des meubles</li>
+        <li>Aérogommage</li>
+        <li>Réparation</li>
+        <li>Finition au choix</li>
+        <li>Livraison</li>
+      </ul>
+    </section>
 
-  <section>
-    <h2>Galerie de réalisation</h2>
-    <div class="gallery">
-      <img src="realisation1.jpg" alt="Réalisation Aerobois 1" />
-      <img src="realisation2.jpg" alt="Réalisation Aerobois 2" />
-      <img src="realisation3.jpg" alt="Réalisation Aerobois 3" />
-    </div>
-  </section>
+    <section class="realisations">
+      <h2>Réalisations</h2>
+      <div>
+        <img src="realisation1.jpg" alt="Réalisation 1" />
+        <img src="realisation2.jpg" alt="Réalisation 2" />
+        <img src="realisation3.jpg" alt="Réalisation 3" />
+      </div>
+    </section>
 
-  <section>
-    <h2>Contactez-nous</h2>
-    <form action="mailto:aerobois65@gmail.com" method="post" enctype="text/plain">
-      <label for="name">Nom :</label>
-      <input type="text" id="name" name="Nom" required />
+    <section class="contact">
+      <h2>Contact et localisation</h2>
+      <p>Email : <a href="mailto:aerobois65@gmail.com">aerobois65@gmail.com</a></p>
+      <p>Téléphone : <a href="tel:+33660629494">06 60 62 94 94</a></p>
+      <p>Adresse : Rte du Comminges, Villeneuve-Lécussan, Occitanie</p>
 
-      <label for="email">Email :</label>
-      <input type="email" id="email" name="Email" required />
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2888.799513247039!2d0.663759715799146!3d43.20457997913313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b1c6f0a8676f27%3A0xddd82bc48a2a9ab2!2sVilleneuve-L%C3%A9cussan%2C%20France!5e0!3m2!1sen!2sus!4v1688319228496!5m2!1sen!2sus"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+  </main>
 
-      <label for="message">Message :</label>
-      <textarea id="message" name="Message" rows="5" required></textarea>
-
-      <button type="submit">Envoyer</button>
-    </form>
-  </section>
-</main>
-
-<footer>
-  <p>Contact : <a href="mailto:aerobois65@gmail.com">aerobois65@gmail.com</a> | Tel : 06 60 62 94 94</p>
-  <p>Adresse : Rte du Comminges, Villeneuve-Lécussan, Occitanie</p>
-</footer>
-
+  <footer>
+    &copy; 2025 Aerobois - Tous droits réservés
+  </footer>
 </body>
+
 </html>
